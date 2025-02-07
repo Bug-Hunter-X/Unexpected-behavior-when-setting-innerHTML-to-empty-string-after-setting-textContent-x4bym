@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <script>
+    // Correct way to modify the content of a div
+    document.getElementById("myDiv").textContent = "This text should replace the previous one.";
+    // Solution: Set textContent to an empty string to clear the div content
+    document.getElementById("myDiv").textContent = "";
+  </script>
+</body>
+</html>
