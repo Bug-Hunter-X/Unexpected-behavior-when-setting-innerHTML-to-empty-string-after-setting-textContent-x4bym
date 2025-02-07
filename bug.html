@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <script>
+    // Incorrect attempt to modify the content of a div
+    document.getElementById("myDiv").textContent = "This text should replace the previous one.";
+    // Bug: No error is thrown, but if you inspect the div, you will find that it is empty
+    document.getElementById("myDiv").innerHTML = "";
+  </script>
+</body>
+</html>
